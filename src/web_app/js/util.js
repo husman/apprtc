@@ -91,7 +91,7 @@ function sendUrlRequest(method, url, async, body) {
 //     }
 //   ]
 // }
-function requestIceServers(iceServerRequestUrl, iceTransports) {
+function requestIceServersOld(iceServerRequestUrl, iceTransports) {
   return new Promise(function(resolve, reject) {
     sendAsyncUrlRequest('POST', iceServerRequestUrl).then(function(response) {
       var iceServerRequestResponse = parseJSON(response);
@@ -108,6 +108,19 @@ function requestIceServers(iceServerRequestUrl, iceTransports) {
       reject(Error('ICE server request error: ' + error.message));
       return;
     });
+  });
+}
+
+function requestIceServers(iceServerRequestUrl, iceTransports) {
+  return new Promise(function(resolve, reject) {
+    var servers = [{
+        credential: "orc123",
+        username: "cfa2",
+        urls: [
+          "turn:52.87.188.226:3478?transport=tcp"
+        ]
+    }];
+    resolve(servers);
   });
 }
 
