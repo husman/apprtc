@@ -117,7 +117,7 @@ function requestIceServers(iceServerRequestUrl, iceTransports) {
         credential: "orc123",
         username: "cfa2",
         urls: [
-          "turn:media2.chineseforall.org:3478?transport=tcp"
+          "turn:168.235.103.15:3478?transport=tcp"
         ]
     }];
     resolve(servers);
