@@ -40,7 +40,7 @@ TURN_SERVER_OVERRIDE = []
 # ]
 
 # TODO(jansson): Remove once AppRTCDemo on iOS supports ICE_SERVER.
-TURN_BASE_URL = 'https://computeengineondemand.appspot.com'
+TURN_BASE_URL = 'https://media2.chineseforall.com'
 TURN_URL_TEMPLATE = '%s/turn?username=%s&key=%s'
 CEOD_KEY = '4080218913'
 
